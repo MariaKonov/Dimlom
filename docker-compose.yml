@@ -24,9 +24,3 @@ services:
 
     volumes:
       - ./data:/var/lib/postgres
-
-  node-app:
-    build: ./gate-simulator
-    image: node-app:Dockerfile.0
-    ports:
-      - '9999:9999'
