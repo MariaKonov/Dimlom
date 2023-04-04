@@ -4,9 +4,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import data.DataHelper;
 
-import java.time.Duration;
-
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -32,14 +29,14 @@ public class CardData {
     }
 
     public void checkIfPaymentSuccessful() {
-        successNotification.shouldBe(visible, Duration.ofDays(15000));
+        successNotification.shouldBe(Condition.visible);
     }
 
     public void checkIfPaymentNotSuccessful() {
-        errorMessage.shouldBe (visible, Duration.ofDays(15000));
+        errorMessage.shouldBe(Condition.visible);
     }
 
     public void checkIfWrongFormatOfField() {
-        wrongFormatNotification.shouldBe(visible);
+        wrongFormatNotification.shouldBe(Condition.visible);
     }
 }

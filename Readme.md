@@ -21,8 +21,7 @@
 2. Открыть проект в IntelliJ IDEA;
 3. В терминале в корне проекта запустить контейнеры:
    docker-compose up;
-4. Запустить приложение:
-   java -jar .\artifacts\aqa-shop.jar;
+4. Запустить приложение aqa-shop.jar (зеленый треугольник);
 5. Открыть второй терминал;
 6. Запустить тесты:
    .\gradlew clean test -DdbUrl=jdbc:mysql://localhost:3306/app;
@@ -31,4 +30,5 @@
 9. Перейти в первый терминал-остановить приложение:
    CTRL + C;
 10. Остановить контейнеры:
-    docker-compose down.
+    docker-compose down;
+11. Оставить приложение aqa-shop.jar (красный квадрат).
